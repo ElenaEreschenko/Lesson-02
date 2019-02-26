@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>
+    Обязательная часть ( 3 балла )<br>
+    Создайте пустой массив letters<br>
+    Создайте строку из нескольких слов, например "Backend As A Service"<br>
+    Напилите код, который разбивает эту строку на массив слов и пушит в массив letters первый символ каждого слова<br>
+    Выведите результат в консоль<br>
+    Объедините все элементы массива letters в одну строку и выведите ее в консоль<br>
+</p>
+<code>
+    var letters = []<br>
+    var str = "Backend As A Service"<br>
+    var mas = str.split ( " " )<br>
+    for(var i=0; i< mas.length ; i++){<br>
+        letters += mas[i].substr(0,1);<br>
+    }<br>
+    console.log(letters)<br>
+</code>
+<p>
+    Дополнительно ( 4 балла )<br>
+    Объявите функцию с одним формальным параметром, которая проверяет тип данных переданного аргумента и:<br>
+    если это число, возвращает текущую дату в формате "20.02.2019, 13:21:51"<br>
+    в противном случае возвращает строку "Неверный тип данных"<br>
+    Вызовите функцию<br>
+</p>
+<code>
+    var today = new Date();<br>
+    var mm = today.getMonth() + 1;<br>
+    var dd = today.getDate();<br>
+    var yyyy = today.getFullYear();<br>
+    var hh = today.getHours()<br>
+    var min = today.getMinutes();<br>
+    var sec = today.getSeconds();<br>
+    if (mm < 10) {<br>
+    mm = '0' + mm;<br>
+    }<br>
+    if (dd < 10) {<br>
+    dd = '0' + dd;<br>
+    }<br>
+    if(hh < 10){<br>
+    hh = '0' + hh;<br>
+    }<br>
+    if(min < 10){<br>
+    min = '0' + min;<br>
+    }<br>
+    if(sec < 10){<br>
+    sec = '0' + sec;<br>
+    }<br>
+    today = dd + '.' + mm + '.' + yyyy + ', ' + hh + ':' + min + ':' + sec;<br>
+    document.write(today);<br>
+    function OneParametr(param){<br>
+    if(typeof(param) == 'number')<br>
+    console.log(today)<br>
+    else {<br>
+    console.log("Неверный тип данных")<br>
+    }}
+</code>
+</body>
+</html>
